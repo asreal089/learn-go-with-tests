@@ -20,7 +20,7 @@ func main() {
 func Countdown(out io.Writer, sleep Sleeper) {
 	for i := countdownStart; i > 0; i-- {
 		fmt.Fprintln(out, i)
-		time.Sleep(1 * time.Second)
+		sleep.Sleep()
 	}
 	fmt.Println(finalWord)
 }
