@@ -15,6 +15,7 @@ func MyGreeterHandler(w http.ResponseWriter, r *http.Request) {
 	Great(w, "World")
 }
 
-func main() {
+// change to main to expose endpoint.
+func mainGreat() {
 	log.Fatal(http.ListenAndServe(":5001", http.HandlerFunc(MyGreeterHandler)))
 }
